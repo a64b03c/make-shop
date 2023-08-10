@@ -1,0 +1,208 @@
+@import "./node_modules/bootstrap/scss/variables";
+
+// bootstrap utilites 一定要引入，不然會沒辦法使用原本的通用類別
+$utilities: map-merge(
+  $utilities,
+  (
+    "height": (
+      property: height,
+      class: h,
+      responsive: true,
+      values:
+        map-merge(
+          $spacers,
+          (
+            10p: 10%,
+            14p: 14%,
+            20p: 20%,
+            30p: 30%,
+            70p: 70%,
+            25p: 25%,
+            50p: 50%,
+            75p: 75%,
+            full: 100%,
+            auto: auto,
+            20vh: 20vh,
+            screen: 100vh,
+            300: 300px,
+            400: 400px,
+            500: 500px,
+            600: 600px,
+          )
+        ),
+    ),
+    "width": (
+      property: width,
+      class: w,
+      responsive: true,
+      values:
+        map-merge(
+          $spacers,
+          (
+            30p: 30%,
+            70p: 70%,
+            25p: 25%,
+            50p: 50%,
+            75p: 75%,
+            80px: 80px,
+            550px: 550px,
+            full: 100%,
+            auto: auto,
+          )
+        ),
+    ),
+    "justify-content": (
+      responsive: true,
+      class: justify,
+      property: justify-content,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+      ),
+    ),
+    "align-items": (
+      responsive: true,
+      class: items,
+      property: align-items,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch,
+      ),
+    ),
+    "flex-grow": (
+      responsive: true,
+      property: flex-grow,
+      class: grow,
+      values: (
+        0: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+      ),
+    ),
+    "letter-spacing": (
+      responsive: true,
+      class: tracking,
+      property: letter-spacing,
+      values: (
+        tighter: -0.05rem,
+        tight: -0.025rem,
+        normal: 0rem,
+        wide: 0.025rem,
+        wider: 0.05rem,
+        widest: 0.1rem,
+      ),
+    ),
+    "list-style-type": (
+      class: list,
+      property: list-style-type,
+      values: (
+        none: none,
+        disc: disc,
+        decimal: decimal,
+      ),
+    ),
+    "text-decoration": (
+      class: td,
+      property: text-decoration,
+      values: none underline line-through,
+    ),
+    "object-fit": (
+      responsive: true,
+      class: object,
+      property: object-fit,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none,
+      ),
+    ),
+    "object-position": (
+      responsive: true,
+      class: object,
+      property: object-position,
+      values: (
+        bottom: bottom,
+        center: center,
+        left: left,
+        left-bottom: left bottom,
+        left-top: left top,
+        right: right,
+        right-bottom: right bottom,
+        right-top: right top,
+        top: top,
+      ),
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: left,
+        end: right,
+        center: center,
+      ),
+    ),
+    // scss-docs-end utils-position
+    // scss-docs-start utils-borders
+    // 添加響應式
+    "border":
+      (
+        responsive: true,
+        property: border,
+        values: (
+          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+            var(--#{$prefix}border-color),
+          0: 0,
+        ),
+      ),
+    "border-top": (
+      responsive: true,
+      property: border-top,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+          var(--#{$prefix}border-color),
+        0: 0,
+      ),
+    ),
+    "border-end": (
+      responsive: true,
+      property: border-right,
+      class: border-end,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+          var(--#{$prefix}border-color),
+        0: 0,
+      ),
+    ),
+    "border-bottom": (
+      responsive: true,
+      property: border-bottom,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+          var(--#{$prefix}border-color),
+        0: 0,
+      ),
+    ),
+    "border-start": (
+      responsive: true,
+      property: border-left,
+      class: border-start,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+          var(--#{$prefix}border-color),
+        0: 0,
+      ),
+    ),
+  )
+);

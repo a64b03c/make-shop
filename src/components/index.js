@@ -1,0 +1,9 @@
+export { default as CategoriesBar } from "./CategoriesBar/CategoriesBar.vue";
+export { default as Marquee } from "./Marquee/Marquee.vue";
+export { default as CountDown } from "./CountDown/CountDown.vue";
+export { default as Header } from "./Header/Header.vue";
+export { default as NumberInput } from "./NumberInput/NumberInput.vue";
+export { default as ThumbsSwiper } from "./Swiper/ThumbsSwiper.vue";
+export { default as MySwiper } from "./Swiper/MySwiper.vue";
+export { default as Modal } from "./Modal/Modal.vue";
+export { default as Card } from "./Card/Card.vue";

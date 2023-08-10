@@ -1,33 +1,45 @@
 {
-  "name": "test",
+  "name": "shop",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint:create": "eslint --init",
+    "lint:eslint": "eslint src/**/*.{js,vue} --cache --fix",
+    "lint:stylelint": "stylelint src/**/*.{css,scss,vue} --cache --fix"
   },
   "dependencies": {
+    "@vee-validate/i18n": "^4.9.6",
+    "@vee-validate/rules": "^4.9.6",
     "@vueuse/core": "^10.0.2",
     "axios": "^1.2.1",
+    "bootstrap": "^5.3.0",
+    "dayjs": "^1.11.7",
     "fast-glob": "^3.2.12",
-    "js-cookie": "^3.0.1",
     "pinia": "^2.0.28",
-    "swiper": "^9.1.0",
+    "sweetalert2": "^11.7.20",
+    "swiper": "^10.0.4",
+    "vee-validate": "^4.9.6",
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6",
-    "vue3-loading-overlay": "^0.0.0"
+    "vue-demi": "^0.14.5",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/eslint-config-prettier": "^7.0.0",
     "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "postcss": "^8.4.24",
     "prettier": "^2.7.1",
+    "rollup-plugin-external-globals": "^0.8.0",
+    "rollup-plugin-visualizer": "^5.9.2",
     "sass": "^1.57.1",
     "vite": "^4.0.0",
+    "vite-plugin-cdn-import": "^0.3.5",
+    "vite-plugin-html": "^3.2.0",
     "vite-plugin-svg-icons": "^2.0.1"
   }
 }

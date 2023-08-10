@@ -3,7 +3,7 @@ import path from "path";
 
 export default function createSvgIcon() {
   return createSvgIconsPlugin({
-    iconDirs: [path.resolve(process.cwd(), "src/assets/icons/svg")],
+    iconDirs: [path.resolve(process.cwd(), "src/assets/icons")],
     symbolId: "icon-[dir]-[name]",
   });
 }

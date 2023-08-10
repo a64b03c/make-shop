@@ -1,0 +1,15 @@
+// sweetalert2
+@import "sweetalert2/dist/sweetalert2.min.css";
+
+div.swal2-container div.swal2-popup {
+  border-radius: 0;
+}
+
+div.swal2-container button.swal2-styled.swal2-confirm {
+  border-radius: 0;
+  background-color: var(--primary);
+}
+
+div.swal2-container button.swal2-styled.swal2-confirm:focus {
+  box-shadow: none;
+}

@@ -1,23 +1,13 @@
 import axios from "axios";
-import { getToken } from "./auth";
 
 const http = axios.create({
-  baseURL: "/api",
+  baseURL: import.meta.env.VITE_API,
   timeout: 10000,
 });
 
-http.interceptors.request.use(
-  (config) => {
-    const isToken = (config.headers || {}).isToken === false;
-    if (getToken() && !isToken) {
-      config.headers["Authorization"] = getToken();
-    }
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
+http.interceptors.request.use((config) => {
+  return config;
+});
 
 http.interceptors.response.use(
   (response) => {
@@ -25,7 +15,7 @@ http.interceptors.response.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 export default http;
