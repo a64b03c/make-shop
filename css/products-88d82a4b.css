@@ -1,0 +1,64 @@
+.card-wrap {
+  height: 500px;
+  padding: 1rem;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+@media (min-width: 1200px) {
+.card-wrap:nth-child(4n+1) {
+    border-left: 1px solid var(--border-color);
+}
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+.card-wrap:nth-child(3n) {
+    border-right: 0px solid var(--border-color);
+}
+}
+@media (max-width: 992px) and (min-width: 576px) {
+.card-wrap {
+    height: 550px;
+}
+.card-wrap:nth-child(2n) {
+    border-right: 0px solid var(--border-color);
+}
+}
+@media (max-width: 576px) {
+.card-wrap {
+    height: 550px;
+    border-right: 0px solid var(--border-color);
+}
+}
+.sort {
+  position: relative;
+}
+.sort ul {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.sort:hover ul {
+  display: block;
+  background-color: var(--primary);
+  color: #fff;
+}
+.sort:hover ul li:hover {
+  background-color: var(--primary);
+}
+.sort:hover ul li:hover a {
+  color: #fff;
+}button.active {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000 !important;
+}
+.add-cart[disabled] {
+  opacity: 0.2;
+}
+@media (min-width: 1200px) {
+.check {
+    position: sticky;
+    top: 60px;
+}
+}
