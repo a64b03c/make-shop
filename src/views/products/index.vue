@@ -1,6 +1,4 @@
 <template>
-  <Header id="header" class="border-bottom" />
-
   <main class="mt-8">
     <section id="banner" class="container-xl">
       <MySwiper :data="xsImgUrls" v-if="isPhone">
@@ -41,7 +39,7 @@
 </template>
 
 <script setup>
-import { CategoriesBar, Marquee, MySwiper, Header } from "@/components";
+import { CategoriesBar, Marquee, MySwiper } from "@/components";
 import { useCheckMedia } from "@/composables/useCheckMedia.js";
 const { isPhone } = useCheckMedia();
 

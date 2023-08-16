@@ -1,6 +1,4 @@
 <template>
-  <Header id="header" class="border-bottom" />
-
   <aside id="setup" class="fs-7 mt-9 mb-1">
     <div class="container-xl p-4">
       <div class="stepper">
@@ -34,7 +32,7 @@
 </template>
 
 <script setup>
-import { Marquee, Header } from "@/components";
+import { Marquee } from "@/components";
 import { reactive, computed, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 const route = useRoute();

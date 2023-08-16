@@ -1,5 +1,4 @@
 <template>
-  <Header id="header" class="border-bottom" />
   <main class="mt-8">
     <!-- 主要 banner -->
     <section id="banner">
@@ -228,7 +227,6 @@ import {
   Marquee,
   CountDown,
   MySwiper,
-  Header,
   Modal,
 } from "@/components";
 import { logisticsInfo, couponInfo } from "@/docs";

@@ -10,6 +10,7 @@ const router = createRouter({
     {
       path: "/",
       name: "root",
+      component: () => import("@/layouts/default.vue"),
       children: [
         {
           path: "/",
@@ -64,17 +65,18 @@ const router = createRouter({
             },
           ],
         },
-        {
-          path: "/404",
-          name: "404",
-          component: () => import("../views/404.vue"),
-        },
-        {
-          path: "/:pathMathch(.*)*",
-          redirect: "/404",
-          name: "any",
-        },
+
       ],
+    },
+    {
+      path: "/404",
+      name: "404",
+      component: () => import("../views/404.vue"),
+    },
+    {
+      path: "/:pathMathch(.*)*",
+      redirect: "/404",
+      name: "any",
     },
   ],
 });
